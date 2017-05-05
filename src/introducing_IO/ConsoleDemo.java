@@ -7,17 +7,23 @@ import java.io.*;
  */
 
 public class ConsoleDemo {
-    public static void main(String[] args) {
+    public static void readLineVer1() {
         Console console = null;
         String line = null;
         try {
             console = System.console();
             if (console != null) {
-                line = console.readLine("Input the line data: ");
-                System.out.println("The result: " + line);
+                line = console.readLine();
+                System.out.println("The Result: " + line);
             }
-        } catch (IOError ex) {
-            ex.printStackTrace();
+        } catch(IOError e) {
+            e.printStackTrace();
         }
+    }
+    public static void readLineVer2() {
+
+    }
+    public static void main(String[] args) {
+
     }
 }
