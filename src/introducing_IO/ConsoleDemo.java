@@ -16,7 +16,7 @@ public class ConsoleDemo {
                 line = console.readLine("Input the line data: ");
                 System.out.println("The result: " + line);
             }
-        } catch (Exception ex) {
+        } catch (IOError ex) {
             ex.printStackTrace();
         }
     }
