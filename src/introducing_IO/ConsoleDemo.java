@@ -73,9 +73,21 @@ public class ConsoleDemo {
             error.printStackTrace();
         }
     }
+    static void printDegree() {
+        Console console = System.console();
+        double radian = 0.0, grad = 0.0;
+        System.out.println(console == null);
+        console.printf("%1$5s %2$5s %3$5s%n", "Degrees", "Radians", "Grads");
+        for (double degree = 0.0; degree < 360.0; degree++) {
+            radian = (Math.PI * degree) / 180.0;
+            grad = (400 * degree) / 360.0;
+            console.format("%5.1f %5.1f %5.1f %n", degree, radian, grad);
+        }
+    }
     public static void main(String[] args) throws IOException{
         //readLineVer1();
         //readLineVer2();
-        PassWord.processPassword();
+        //PassWord.processPassword();
+        printDegree();
     }
 }
