@@ -1,4 +1,4 @@
-package ouputStreams;
+package outputStreams;
 
 import java.io.OutputStream;
 /**
