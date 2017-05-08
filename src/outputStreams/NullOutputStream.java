@@ -24,6 +24,9 @@ public class NullOutputStream extends OutputStream {
         this.closed = true;
     }
     public static void main(String[] args) {
-
+        OutputStream output = new NullOutputStream();
+        PrintStream ps = new PrintStream(output);
+        System.setOut(ps);
+        System.setErr(ps);
     }
 }
