@@ -22,7 +22,9 @@ public class ReadMethodDemo {
         for (int i = 0; i < bytes.length; i++) {
             bytes[i] = (byte)System.in.read();
             if (bytes[i] < 0) {
-                convert[index] = bytes[i] + 256;
+                convert[index++] = bytes[i] + 256;
+            } else {
+                convert[index++] = bytes[i];
             }
         }
         System.out.println(Arrays.toString(convert));
