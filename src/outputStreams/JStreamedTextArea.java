@@ -45,4 +45,5 @@ public class JStreamedTextArea extends JTextArea {
             this.closed = true;
         }
     }
+    public static void main(String[] args) {}
 }
